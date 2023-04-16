@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace AnimalShelter.Models.Presentation
 {
-    internal class ResponseShelterModel
+    public class ShelterResponseModel
     {
         public bool IsAccepted { get; set; }
+        public int KennelNumber { get; set; }
         public string Message { get; set; }
     }
 }

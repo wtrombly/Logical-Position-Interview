@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace AnimalShelter.Models.Presentation
 {
-    public  class RequestShelterModel
+    public class RequestShelterModel
     {
-        string AnimalType { get; set; }
-        string AnimalName { get; set; }
-        double AnimalSizeInLbs { get; set; }
+        public string AnimalType { get; set; }
+        public string AnimalName { get; set; }
+        public double AnimalSizeInLbs { get; set; }
     }
 }
