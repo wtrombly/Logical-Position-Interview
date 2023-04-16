@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AnimalShelter.Models.Business
+namespace AnimalShelter.Data.DataModels
 {
     public enum KennelSize
     {

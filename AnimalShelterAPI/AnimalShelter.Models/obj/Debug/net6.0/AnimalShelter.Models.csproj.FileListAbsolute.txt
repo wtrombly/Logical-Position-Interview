@@ -1,0 +1,12 @@
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Models\bin\Debug\net6.0\AnimalShelter.Models.deps.json
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Models\bin\Debug\net6.0\AnimalShelter.Models.dll
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Models\bin\Debug\net6.0\AnimalShelter.Models.pdb
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Models\obj\Debug\net6.0\AnimalShelter.Models.csproj.AssemblyReference.cache
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Models\obj\Debug\net6.0\AnimalShelter.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Models\obj\Debug\net6.0\AnimalShelter.Models.AssemblyInfoInputs.cache
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Models\obj\Debug\net6.0\AnimalShelter.Models.AssemblyInfo.cs
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Models\obj\Debug\net6.0\AnimalShelter.Models.csproj.CoreCompileInputs.cache
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Models\obj\Debug\net6.0\AnimalShelter.Models.dll
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Models\obj\Debug\net6.0\refint\AnimalShelter.Models.dll
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Models\obj\Debug\net6.0\AnimalShelter.Models.pdb
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Models\obj\Debug\net6.0\ref\AnimalShelter.Models.dll

@@ -11,5 +11,7 @@ namespace AnimalShelter.Interfaces
     public interface IShelterKennelRepository
     {
         public List<ShelterKennelBO> GetShelterKennels(RequestShelterModel model);
+
+        public void UpdateShelterKennel(ShelterResponseModel response);
     }
 }

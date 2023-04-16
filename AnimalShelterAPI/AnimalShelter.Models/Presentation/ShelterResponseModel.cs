@@ -10,6 +10,7 @@ namespace AnimalShelter.Models.Presentation
     {
         public bool IsAccepted { get; set; }
         public int KennelNumber { get; set; }
+        public string AnimalName { get; set; }  
         public string Message { get; set; }
     }
 }

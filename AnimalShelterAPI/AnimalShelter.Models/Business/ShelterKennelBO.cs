@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace AnimalShelter.Models.Business
 {
     public interface ShelterKennelBO
@@ -11,5 +12,12 @@ namespace AnimalShelter.Models.Business
         public int KennelIDValue { get; set; } 
         KennelSize KennelSize { get; set; }
         public bool IsOccupied { get; set; }
+    }
+
+    public enum KennelSize
+    {
+        Small,
+        Medium,
+        Large
     }
 }
