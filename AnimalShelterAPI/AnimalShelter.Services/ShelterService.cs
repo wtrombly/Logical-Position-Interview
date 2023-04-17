@@ -133,18 +133,7 @@ namespace AnimalShelter.Services
 
         }
 
-        public ResponseRemoveModel RemoveAnimal(RequestShelterModel model)
-        {
-            var response = new ResponseRemoveModel
-            {
-                IsRemoved = true,
-                KennelId = null,
-                AnimalName = model.AnimalName,
-                Message = "The animal has been removed from the kennel."
-            };
-            _shelterKennelRepository.UpdateShelterKennel(response);
-            return response;
-        }
+        
 
 
     }

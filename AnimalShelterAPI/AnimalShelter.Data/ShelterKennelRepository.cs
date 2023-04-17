@@ -18,7 +18,7 @@ namespace AnimalShelter.Data
             _connectionFactory = connectionFactory;
         }
 
-        public List<ShelterKennelBO> GetShelterKennels(RequestShelterModel model)
+        public List<ShelterKennelBO> GetShelterKennels()
         {
             using (var conn = _connectionFactory.CreateConnection())
             {
@@ -27,7 +27,7 @@ namespace AnimalShelter.Data
                 // or whatever you're using
             }
 
-            return new List<ShelterKennelBO> { };
+            return await new List<ShelterKennelBO> { };
         }
 
         public void UpdateShelterKennel(ResponseShelterModel response)

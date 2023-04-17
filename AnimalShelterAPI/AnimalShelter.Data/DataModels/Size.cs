@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AnimalShelter.Data.DataModels
 {
-    public enum KennelSize
+    public enum Size
     {
         Small,
         Medium,

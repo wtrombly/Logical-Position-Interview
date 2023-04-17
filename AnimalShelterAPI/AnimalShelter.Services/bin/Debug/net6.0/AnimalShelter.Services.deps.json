@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "AnimalShelter.Services/1.0.0": {
+        "dependencies": {
+          "AnimalShelter.Interfaces": "1.0.0",
+          "AnimalShelter.Models": "1.0.0"
+        },
+        "runtime": {
+          "AnimalShelter.Services.dll": {}
+        }
+      },
+      "AnimalShelter.Interfaces/1.0.0": {
+        "dependencies": {
+          "AnimalShelter.Models": "1.0.0"
+        },
+        "runtime": {
+          "AnimalShelter.Interfaces.dll": {}
+        }
+      },
+      "AnimalShelter.Models/1.0.0": {
+        "runtime": {
+          "AnimalShelter.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AnimalShelter.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AnimalShelter.Interfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AnimalShelter.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

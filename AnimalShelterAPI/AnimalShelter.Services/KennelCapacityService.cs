@@ -21,7 +21,7 @@ namespace AnimalShelter.Services
         {
             _shelterKennelRepository = shelterKennelRepository;
 
-            var kennels = _shelterKennelRepository.GetShelterKennels(requestShelterModel);
+            var kennels = _shelterKennelRepository.GetShelterKennels();
 
             KennelCapacity = CalculateKennelCapacity(kennels);
         }
@@ -33,17 +33,17 @@ namespace AnimalShelter.Services
             kennelCapacity.KennelCount = kennels.Count;
             kennelCapacity.KennelCountVacant = kennels.FindAll(k => k.IsOccupied == false).Count;
 
-            kennelCapacity.SmallKennelCount = kennels.Count(k => k.KennelSize == KennelSize.Small);
-            kennelCapacity.SmallKennelCountVacant = kennels.FindAll(k => k.IsOccupied == false && k.KennelSize == KennelSize.Small).Count;
-            kennelCapacity.SmallVacantKennelIds = kennels.Where(k => k.IsOccupied == false && k.KennelSize == KennelSize.Small).Select(k => k.KennelIDValue).ToList();
+            kennelCapacity.SmallKennelCount = kennels.Count(k => k.KennelSize == Size.Small);
+            kennelCapacity.SmallKennelCountVacant = kennels.FindAll(k => k.IsOccupied == false && k.KennelSize == Size.Small).Count;
+            kennelCapacity.SmallVacantKennelIds = kennels.Where(k => k.IsOccupied == false && k.KennelSize == Size.Small).Select(k => k.KennelIdValue).ToList();
 
-            kennelCapacity.MediumKennelCount = kennels.Count(k => k.KennelSize == KennelSize.Medium);
-            kennelCapacity.MediumKennelCountVacant = kennels.FindAll(k => k.IsOccupied == false && k.KennelSize == KennelSize.Medium).Count;
-            kennelCapacity.MediumVacantKennelIds = kennels.Where(k => k.IsOccupied == false && k.KennelSize == KennelSize.Medium).Select(k => k.KennelIDValue).ToList();
+            kennelCapacity.MediumKennelCount = kennels.Count(k => k.KennelSize == Size.Medium);
+            kennelCapacity.MediumKennelCountVacant = kennels.FindAll(k => k.IsOccupied == false && k.KennelSize == Size.Medium).Count;
+            kennelCapacity.MediumVacantKennelIds = kennels.Where(k => k.IsOccupied == false && k.KennelSize == Size.Medium).Select(k => k.KennelIdValue).ToList();
 
-            kennelCapacity.LargeKennelCount = kennels.Count(k => k.KennelSize == KennelSize.Large);
-            kennelCapacity.LargeKennelCountVacant = kennels.FindAll(k => k.IsOccupied == false && k.KennelSize == KennelSize.Large).Count;
-            kennelCapacity.LargeVacantKennelIds = kennels.Where(k => k.IsOccupied == false && k.KennelSize == KennelSize.Large).Select(k => k.KennelIDValue).ToList();
+            kennelCapacity.LargeKennelCount = kennels.Count(k => k.KennelSize == Size.Large);
+            kennelCapacity.LargeKennelCountVacant = kennels.FindAll(k => k.IsOccupied == false && k.KennelSize == Size.Large).Count;
+            kennelCapacity.LargeVacantKennelIds = kennels.Where(k => k.IsOccupied == false && k.KennelSize == Size.Large).Select(k => k.KennelIdValue).ToList();
 
             return kennelCapacity;
         }

@@ -10,6 +10,6 @@ namespace AnimalShelter.Interfaces
 {
     public interface IShelterService
     {
-        ShelterResponseModel ShelterAnimal(RequestShelterModel model);
+        ResponseShelterModel ShelterAnimal(RequestShelterModel model);
     }
 }

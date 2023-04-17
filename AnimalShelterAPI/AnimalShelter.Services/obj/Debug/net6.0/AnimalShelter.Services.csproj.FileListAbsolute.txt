@@ -1,0 +1,17 @@
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Services\bin\Debug\net6.0\AnimalShelter.Services.deps.json
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Services\bin\Debug\net6.0\AnimalShelter.Services.dll
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Services\bin\Debug\net6.0\AnimalShelter.Services.pdb
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Services\bin\Debug\net6.0\AnimalShelter.Interfaces.dll
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Services\bin\Debug\net6.0\AnimalShelter.Models.dll
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Services\bin\Debug\net6.0\AnimalShelter.Interfaces.pdb
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Services\bin\Debug\net6.0\AnimalShelter.Models.pdb
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Services\obj\Debug\net6.0\AnimalShelter.Services.csproj.AssemblyReference.cache
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Services\obj\Debug\net6.0\AnimalShelter.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Services\obj\Debug\net6.0\AnimalShelter.Services.AssemblyInfoInputs.cache
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Services\obj\Debug\net6.0\AnimalShelter.Services.AssemblyInfo.cs
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Services\obj\Debug\net6.0\AnimalShelter.Services.csproj.CoreCompileInputs.cache
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Services\obj\Debug\net6.0\AnimalShelter.Services.csproj.CopyComplete
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Services\obj\Debug\net6.0\AnimalShelter.Services.dll
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Services\obj\Debug\net6.0\refint\AnimalShelter.Services.dll
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Services\obj\Debug\net6.0\AnimalShelter.Services.pdb
+C:\Projects\LogicalPosition2\AnimalShelterAPI\AnimalShelter.Services\obj\Debug\net6.0\ref\AnimalShelter.Services.dll

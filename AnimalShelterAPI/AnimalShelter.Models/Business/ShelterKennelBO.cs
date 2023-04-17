@@ -7,14 +7,15 @@ using System.Threading.Tasks;
 
 namespace AnimalShelter.Models.Business
 {
-    public interface ShelterKennelBO
+    public class ShelterKennelBO 
     {
-        public int KennelIDValue { get; set; } 
-        KennelSize KennelSize { get; set; }
+        public int KennelIdValue { get; set; } 
+        public Size KennelSize { get; set; }
         public bool IsOccupied { get; set; }
+        public IShelterAnimal ShelterAnimal { get; set; }
     }
 
-    public enum KennelSize
+    public enum Size
     {
         Small,
         Medium,
