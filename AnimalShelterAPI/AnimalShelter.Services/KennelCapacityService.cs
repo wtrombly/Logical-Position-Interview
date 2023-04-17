@@ -26,7 +26,7 @@ namespace AnimalShelter.Services
             KennelCapacity = CalculateKennelCapacity(kennels);
         }
 
-        private KennelCapacityBO CalculateKennelCapacity(List<ShelterKennelBO> kennels)
+        public KennelCapacityBO CalculateKennelCapacity(List<ShelterKennelBO> kennels)
         {
             KennelCapacityBO kennelCapacity = new KennelCapacityBO();
 
@@ -47,5 +47,8 @@ namespace AnimalShelter.Services
 
             return kennelCapacity;
         }
+
+        
+
     }
 }

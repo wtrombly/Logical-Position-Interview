@@ -25,9 +25,6 @@ namespace AnimalShelter.Models.Business
         public int LargeKennelCountVacant;
         public List<int> LargeVacantKennelIds;
 
-
-
-
         public KennelCapacityBO() { }
 
     }

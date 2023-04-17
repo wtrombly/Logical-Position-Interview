@@ -30,7 +30,17 @@ namespace AnimalShelter.Data
             return new List<ShelterKennelBO> { };
         }
 
-        public void UpdateShelterKennel(ShelterResponseModel response)
+        public void UpdateShelterKennel(ResponseShelterModel response)
+        {
+            using (var conn = _connectionFactory.CreateConnection())
+            {
+                // put your entity framework stuff here
+                // or dapper
+                // or whatever you're using
+            }
+        }
+
+        public void UpdateShelterKennel(ResponseRemoveModel response)
         {
             using (var conn = _connectionFactory.CreateConnection())
             {

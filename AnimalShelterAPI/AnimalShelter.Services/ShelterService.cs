@@ -17,49 +17,64 @@ namespace AnimalShelter.Services
         public ShelterService(KennelCapacityService kennelCapacityService, IShelterKennelRepository shelterKennelRepository)
         {
             _kennelCapacityService = kennelCapacityService;
-            _shelterKennelRepository = shelterKennelRepository; 
+            _shelterKennelRepository = shelterKennelRepository;
         }
 
-        public ShelterResponseModel ShelterAnimal(RequestShelterModel model)
+        public ResponseShelterModel ShelterAnimal(RequestShelterModel model)
         {
 
             int smallSizeLimit = 20;
             int mediumSizeLimit = 50;
             var kennelCapacity = _kennelCapacityService.KennelCapacity;
-
+            // if no kennels are vacant, refuse animal
             if (model.AnimalSizeInLbs == 0)
             {
-                return new ShelterResponseModel
+                return new ResponseShelterModel
                 {
                     IsAccepted = false,
-                    KennelNumber = 0,
                     AnimalName = model.AnimalName,
-                    Message = "Animal size must be greater than 0 lbs. Are we providing shelter for an animal?"
+                    Message = "Animal size must be greater than 0 lbs."
                 };
             }
 
-            if (model.AnimalSizeInLbs <= smallSizeLimit && kennelCapacity.SmallKennelCountVacant > 0)
+
+            // if a small animal, check for the best kennel first and get smaller, assign accordingly
+            if (model.AnimalSizeInLbs <= smallSizeLimit && kennelCapacity.LargeKennelCountVacant > 0)
             {
-                int assignedKennel = kennelCapacity.SmallVacantKennelIds[0];
-                                
-                var response = new ShelterResponseModel
+                int assignedKennel = kennelCapacity.LargeVacantKennelIds[0];
+
+                var response = new ResponseShelterModel
                 {
                     IsAccepted = true,
-                    KennelNumber = assignedKennel,
+                    KennelId = assignedKennel,
                     AnimalName = model.AnimalName,
                     Message = "Please proceed with sheltering the animal in kennel number:" + assignedKennel
                 };
                 _shelterKennelRepository.UpdateShelterKennel(response);
                 return response;
             }
-
-            if (model.AnimalSizeInLbs >= smallSizeLimit && model.AnimalSizeInLbs <= mediumSizeLimit && kennelCapacity.MediumKennelCount > 0)
+            else if (model.AnimalSizeInLbs <= smallSizeLimit && kennelCapacity.MediumKennelCountVacant > 0)
             {
                 int assignedKennel = kennelCapacity.MediumVacantKennelIds[0];
-                var response = new ShelterResponseModel
+
+                var response = new ResponseShelterModel
                 {
                     IsAccepted = true,
-                    KennelNumber = assignedKennel,
+                    KennelId = assignedKennel,
+                    AnimalName = model.AnimalName,
+                    Message = "Please proceed with sheltering the animal in kennel number:" + assignedKennel
+                };
+                _shelterKennelRepository.UpdateShelterKennel(response);
+                return response;
+            }
+            else if (model.AnimalSizeInLbs <= smallSizeLimit && kennelCapacity.SmallKennelCountVacant > 0)
+            {
+                int assignedKennel = kennelCapacity.SmallVacantKennelIds[0];
+
+                var response = new ResponseShelterModel
+                {
+                    IsAccepted = true,
+                    KennelId = assignedKennel,
                     AnimalName = model.AnimalName,
                     Message = "Please proceed with sheltering the animal in kennel number:" + assignedKennel
                 };
@@ -67,13 +82,42 @@ namespace AnimalShelter.Services
                 return response;
             }
 
+
+            // if a medium sized animal, check for the best kennel first and get smaller, assign accordingly
+            if (model.AnimalSizeInLbs >= smallSizeLimit && model.AnimalSizeInLbs <= mediumSizeLimit && kennelCapacity.LargeKennelCount > 0)
+            {
+                int assignedKennel = kennelCapacity.LargeVacantKennelIds[0];
+                var response = new ResponseShelterModel
+                {
+                    IsAccepted = true,
+                    KennelId = assignedKennel,
+                    AnimalName = model.AnimalName,
+                    Message = "Please proceed with sheltering the animal in kennel number:" + assignedKennel
+                };
+                _shelterKennelRepository.UpdateShelterKennel(response);
+                return response;
+            }
+            else if(model.AnimalSizeInLbs >= smallSizeLimit && model.AnimalSizeInLbs <= mediumSizeLimit && kennelCapacity.LargeKennelCount > 0)
+            {
+                int assignedKennel = kennelCapacity.MediumVacantKennelIds[0];
+                var response = new ResponseShelterModel
+                {
+                    IsAccepted = true,
+                    KennelId = assignedKennel,
+                    AnimalName = model.AnimalName,
+                    Message = "Please proceed with sheltering the animal in kennel number:" + assignedKennel
+                };
+                _shelterKennelRepository.UpdateShelterKennel(response);
+                return response;
+            }
+            // if large animal, check that there is a large vacant kennel
             if (model.AnimalSizeInLbs >= mediumSizeLimit && kennelCapacity.LargeKennelCount > 0)
             {
                 int assignedKennel = kennelCapacity.LargeVacantKennelIds[0];
-                var response = new ShelterResponseModel
+                var response = new ResponseShelterModel
                 {
                     IsAccepted = true,
-                    KennelNumber = assignedKennel,
+                    KennelId = assignedKennel,
                     AnimalName = model.AnimalName,
                     Message = "Please proceed with sheltering the animal in kennel number:" + assignedKennel
                 };
@@ -81,13 +125,25 @@ namespace AnimalShelter.Services
                 return response;
             }
 
-            return new ShelterResponseModel
+            return new ResponseShelterModel
             {
                 IsAccepted = false,
-                KennelNumber = 0,
-                Message = "We apologize but our kennels are currently full."
+                Message = "Unable to shelter animal due to lack of vacancy."
             };
 
+        }
+
+        public ResponseRemoveModel RemoveAnimal(RequestShelterModel model)
+        {
+            var response = new ResponseRemoveModel
+            {
+                IsRemoved = true,
+                KennelId = null,
+                AnimalName = model.AnimalName,
+                Message = "The animal has been removed from the kennel."
+            };
+            _shelterKennelRepository.UpdateShelterKennel(response);
+            return response;
         }
 
 
