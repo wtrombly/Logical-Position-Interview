@@ -11,21 +11,21 @@ namespace AnimalShelter.Services
 {
     public class SwapAnimalService : ISwapAnimalService
     {
-        private readonly IValidatorService _validatorService;
+        private readonly IKennelStateService _kennelStateService;
 
-        public SwapAnimalService(IValidatorService validatorService)
+        public SwapAnimalService(IKennelStateService kennelStateService)
         {
-            _validatorService = validatorService;
+            _kennelStateService = kennelStateService;
         }
 
 
         public void SwapAnimal(List<ShelterKennelBO> kennels, Size kennelSizeToCheck, Size animalSizeToCheck, Size kennelSizeToFind)
         {
-
+            foreach (var kennel in kennels) _kennelStateService.SetShelterAnimal(kennel);
 
             for (int i = 0; i < kennels.Count; i++)
             {
-                if (kennels[i].KennelSize == kennelSizeToCheck && kennels[i].IsOccupied == false && kennels[i].ShelterAnimal.AnimalSize == animalSizeToCheck)
+                if (kennels[i].KennelSize == kennelSizeToCheck && kennels[i].IsOccupied == true && kennels[i].ShelterAnimal.AnimalSize == animalSizeToCheck)
                 {
                     var smallestVacantKennel = kennels.Find(k => k.IsOccupied == false && k.KennelSize == kennelSizeToFind);
 

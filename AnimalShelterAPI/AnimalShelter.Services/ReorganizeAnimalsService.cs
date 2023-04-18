@@ -15,14 +15,16 @@ namespace AnimalShelter.Services
             _swapAnimalService = swapAnimalService; 
         }
 
+        // could optimize to check only occupied kennels
         public List<ShelterKennelBO> ReorganizeAnimals()
         {
             var kennels = _shelterKennelRepository.GetShelterKennels();
-
-            int smallAnimalsInLargeKennels = kennels.FindAll(k => k.IsOccupied && k.ShelterAnimal.AnimalSize == Size.Small && k.KennelSize == Size.Large).Count();
-            int smallAnimalsInMediumKennels = kennels.FindAll(k => k.IsOccupied && k.ShelterAnimal.AnimalSize == Size.Small && k.KennelSize == Size.Medium).Count();
-            int smallAnimalsInSmallKennels = kennels.FindAll(k => k.IsOccupied && k.ShelterAnimal.AnimalSize == Size.Small && k.KennelSize == Size.Small).Count();
-
+            
+            // For Debugging
+            //int smallAnimalsInLargeKennels = kennels.FindAll(k => k.IsOccupied && k.ShelterAnimal.AnimalSize == Size.Small && k.KennelSize == Size.Large).Count();
+            //int smallAnimalsInMediumKennels = kennels.FindAll(k => k.IsOccupied && k.ShelterAnimal.AnimalSize == Size.Small && k.KennelSize == Size.Medium).Count();
+            //int smallAnimalsInSmallKennels = kennels.FindAll(k => k.IsOccupied && k.ShelterAnimal.AnimalSize == Size.Small && k.KennelSize == Size.Small).Count();
+            
             // run the loop to check large kennels with small animals.
             _swapAnimalService.SwapAnimal(kennels, Size.Large, Size.Small, Size.Small);
 

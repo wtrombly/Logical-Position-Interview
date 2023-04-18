@@ -12,6 +12,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddTransient<IKennelCapacityService, KennelCapacityService>();
+builder.Services.AddTransient<IKennelStateService, KennelStateService>();
 builder.Services.AddTransient<IRemoveService, RemoveService>();
 builder.Services.AddTransient<IReorganizeAnimalsService, ReorganizeAnimalsService>();
 builder.Services.AddTransient<IShelterService, ShelterService>();
