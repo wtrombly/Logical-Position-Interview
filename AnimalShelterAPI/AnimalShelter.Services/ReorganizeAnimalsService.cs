@@ -19,6 +19,9 @@ namespace AnimalShelter.Services
         public List<ShelterKennelBO> ReorganizeAnimals()
         {
             var kennels = _shelterKennelRepository.GetShelterKennels();
+            
+            // Optimizaion: no sense attempting loops and calling another function when kennels is null
+            if (kennels == null) { return kennels; }
 
             // run the loop to check large kennels with small animals.
             _swapAnimalService.SwapAnimal(kennels, Size.Large, Size.Small, Size.Small);

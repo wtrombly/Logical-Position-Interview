@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AnimalShelterAPI.Services.Tests
 {
-    public  class ReorganizeAnimalsServiceTests
+    public class ReorganizeAnimalsServiceTests
     {
 
     }
