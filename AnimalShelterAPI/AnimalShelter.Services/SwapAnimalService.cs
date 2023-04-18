@@ -18,7 +18,6 @@ namespace AnimalShelter.Services
             _kennelStateService = kennelStateService;
         }
 
-
         public void SwapAnimal(List<ShelterKennelBO> kennels, Size kennelSizeToCheck, Size animalSizeToCheck, Size kennelSizeToFind)
         {
             foreach (var kennel in kennels) _kennelStateService.SetShelterAnimal(kennel);
