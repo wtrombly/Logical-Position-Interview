@@ -10,14 +10,14 @@ using System.Threading.Tasks;
 
 namespace AnimalShelter.Services
 {
-    public class KennelCapacityService
+    public class KennelCapacityService : IKennelCapacityService
     {
         private readonly IShelterKennelRepository _shelterKennelRepository;
 
         // Expose a KennelCapacityBO property
         public KennelCapacityBO KennelCapacity { get; private set; }
 
-        public KennelCapacityService(IShelterKennelRepository shelterKennelRepository, RequestShelterModel requestShelterModel)
+        public KennelCapacityService(IShelterKennelRepository shelterKennelRepository)
         {
             _shelterKennelRepository = shelterKennelRepository;
 

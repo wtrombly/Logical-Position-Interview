@@ -1,0 +1,265 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Projects\\LogicalPosition2\\AnimalShelterAPI\\AnimalShelterAPI.Tests\\AnimalShelterAPI.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Projects\\LogicalPosition2\\AnimalShelterAPI\\AnimalShelter.Interfaces\\AnimalShelter.Interfaces.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\LogicalPosition2\\AnimalShelterAPI\\AnimalShelter.Interfaces\\AnimalShelter.Interfaces.csproj",
+        "projectName": "AnimalShelter.Interfaces",
+        "projectPath": "C:\\Projects\\LogicalPosition2\\AnimalShelterAPI\\AnimalShelter.Interfaces\\AnimalShelter.Interfaces.csproj",
+        "packagesPath": "C:\\Users\\willt\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\LogicalPosition2\\AnimalShelterAPI\\AnimalShelter.Interfaces\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\willt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Projects\\LogicalPosition2\\AnimalShelterAPI\\AnimalShelter.Models\\AnimalShelter.Models.csproj": {
+                "projectPath": "C:\\Projects\\LogicalPosition2\\AnimalShelterAPI\\AnimalShelter.Models\\AnimalShelter.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\LogicalPosition2\\AnimalShelterAPI\\AnimalShelter.Models\\AnimalShelter.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\LogicalPosition2\\AnimalShelterAPI\\AnimalShelter.Models\\AnimalShelter.Models.csproj",
+        "projectName": "AnimalShelter.Models",
+        "projectPath": "C:\\Projects\\LogicalPosition2\\AnimalShelterAPI\\AnimalShelter.Models\\AnimalShelter.Models.csproj",
+        "packagesPath": "C:\\Users\\willt\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\LogicalPosition2\\AnimalShelterAPI\\AnimalShelter.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\willt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\LogicalPosition2\\AnimalShelterAPI\\AnimalShelter.Services\\AnimalShelter.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\LogicalPosition2\\AnimalShelterAPI\\AnimalShelter.Services\\AnimalShelter.Services.csproj",
+        "projectName": "AnimalShelter.Services",
+        "projectPath": "C:\\Projects\\LogicalPosition2\\AnimalShelterAPI\\AnimalShelter.Services\\AnimalShelter.Services.csproj",
+        "packagesPath": "C:\\Users\\willt\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\LogicalPosition2\\AnimalShelterAPI\\AnimalShelter.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\willt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Projects\\LogicalPosition2\\AnimalShelterAPI\\AnimalShelter.Interfaces\\AnimalShelter.Interfaces.csproj": {
+                "projectPath": "C:\\Projects\\LogicalPosition2\\AnimalShelterAPI\\AnimalShelter.Interfaces\\AnimalShelter.Interfaces.csproj"
+              },
+              "C:\\Projects\\LogicalPosition2\\AnimalShelterAPI\\AnimalShelter.Models\\AnimalShelter.Models.csproj": {
+                "projectPath": "C:\\Projects\\LogicalPosition2\\AnimalShelterAPI\\AnimalShelter.Models\\AnimalShelter.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\LogicalPosition2\\AnimalShelterAPI\\AnimalShelterAPI.Tests\\AnimalShelterAPI.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\LogicalPosition2\\AnimalShelterAPI\\AnimalShelterAPI.Tests\\AnimalShelterAPI.Tests.csproj",
+        "projectName": "AnimalShelterAPI.Tests",
+        "projectPath": "C:\\Projects\\LogicalPosition2\\AnimalShelterAPI\\AnimalShelterAPI.Tests\\AnimalShelterAPI.Tests.csproj",
+        "packagesPath": "C:\\Users\\willt\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\LogicalPosition2\\AnimalShelterAPI\\AnimalShelterAPI.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\willt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Projects\\LogicalPosition2\\AnimalShelterAPI\\AnimalShelter.Services\\AnimalShelter.Services.csproj": {
+                "projectPath": "C:\\Projects\\LogicalPosition2\\AnimalShelterAPI\\AnimalShelter.Services\\AnimalShelter.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.3.2, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.3, )"
+            },
+            "NUnit.Analyzers": {
+              "target": "Package",
+              "version": "[3.5.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

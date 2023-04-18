@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace AnimalShelter.Models.Presentation
 {
-    public class ResponseRemoveModel
+    public class AdoptionResponseModel
     {
         public bool IsRemoved { get; set; }
         public int? KennelId { get; set; }   

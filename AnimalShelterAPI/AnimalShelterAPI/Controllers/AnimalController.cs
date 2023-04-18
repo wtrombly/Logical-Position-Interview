@@ -1,6 +1,5 @@
 ﻿using AnimalShelter.Interfaces;
 using AnimalShelter.Models.Presentation;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AnimalShelterAPI.Controllers
@@ -10,6 +9,7 @@ namespace AnimalShelterAPI.Controllers
     public class AnimalController : ControllerBase
     {
         private readonly IShelterService _shelterService;
+        private readonly IRemoveService _removeService;
 
         public AnimalController(IShelterService iShelterService)
         {
@@ -17,12 +17,17 @@ namespace AnimalShelterAPI.Controllers
         }
 
         [HttpPost]
-        [Route("ShelterAnimal")]
-
-        public async Task<IActionResult> PlaceAnimal(RequestShelterModel model)
+        [Route("Shelter")]
+        public async Task<IActionResult> PlaceAnimal(ShelterRequestModel model)
         {
             return Ok(_shelterService.ShelterAnimal(model));
         }
 
+        [HttpPut]
+        [Route("Adopt")]
+        public async Task<IActionResult> AdoptAnimal(AdoptionRequestModel model)
+        {
+            return Ok(_removeService.RemoveAnimal(model));
+        }
     }
 }

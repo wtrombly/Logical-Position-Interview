@@ -11,7 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\AnimalShelter.Data\AnimalShelter.Data.csproj" />
+    <ProjectReference Include="..\AnimalShelter.Interfaces\AnimalShelter.Interfaces.csproj" />
+    <ProjectReference Include="..\AnimalShelter.Models\AnimalShelter.Models.csproj" />
+    <ProjectReference Include="..\AnimalShelter.Services\AnimalShelter.Services.csproj" />
   </ItemGroup>
 
 </Project>

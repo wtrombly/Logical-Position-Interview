@@ -1,5 +1,4 @@
 ﻿using AnimalShelter.Interfaces;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AnimalShelterAPI.Controllers
@@ -8,18 +7,28 @@ namespace AnimalShelterAPI.Controllers
     [ApiController]
     public class KennelController : ControllerBase
     {
-        private readonly IShelterKennelRepository _shelterKennelRepostory;
+        private readonly IShelterKennelRepository _shelterKennelRepository;
+        private readonly IReorganizeAnimalsService _reorganizeAnimalsService;
 
-        public KennelController(IShelterKennelRepository shelterKennelRepostory)
+        public KennelController(IShelterKennelRepository shelterKennelRepository, IReorganizeAnimalsService reorganizeAnimalsService)
         {
-            _shelterKennelRepostory = shelterKennelRepostory;
+            _shelterKennelRepository = shelterKennelRepository;
+            _reorganizeAnimalsService = reorganizeAnimalsService;
         }
 
         [HttpGet]
         [Route("getall")]
         public async Task<IActionResult> GetKennels()
         {
-            return Ok(_shelterKennelRepostory.GetShelterKennels());
+            return Ok(_shelterKennelRepository.GetShelterKennels().Select(x => new );
+        }
+
+        [HttpPut]
+        [Route("reorganizekennels")]
+        public async Task<IActionResult> ReorganizeKennels()
+        {
+            return Ok(_reorganizeAnimalsService.ReorganizeAnimals());
         }
     }
+
 }

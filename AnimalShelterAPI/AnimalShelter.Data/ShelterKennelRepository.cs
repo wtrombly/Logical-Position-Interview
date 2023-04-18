@@ -1,11 +1,6 @@
 ﻿using AnimalShelter.Interfaces;
 using AnimalShelter.Models.Business;
 using AnimalShelter.Models.Presentation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AnimalShelter.Data
 {
@@ -17,7 +12,8 @@ namespace AnimalShelter.Data
         {
             _connectionFactory = connectionFactory;
         }
-
+        // dont return the Business Object, instead create a ResponseShelterKennelModel and then convert it to your BO.
+        // either convert in controller, or make a method to convert.
         public List<ShelterKennelBO> GetShelterKennels()
         {
             using (var conn = _connectionFactory.CreateConnection())
@@ -27,10 +23,10 @@ namespace AnimalShelter.Data
                 // or whatever you're using
             }
 
-            return await new List<ShelterKennelBO> { };
+            return new List<ShelterKennelBO> { };
         }
 
-        public void UpdateShelterKennel(ResponseShelterModel response)
+        public void UpdateShelterKennel(ShelterResponseModel response)
         {
             using (var conn = _connectionFactory.CreateConnection())
             {
@@ -40,7 +36,7 @@ namespace AnimalShelter.Data
             }
         }
 
-        public void UpdateShelterKennel(ResponseRemoveModel response)
+        public void UpdateShelterKennel(AdoptionResponseModel response)
         {
             using (var conn = _connectionFactory.CreateConnection())
             {
@@ -48,6 +44,28 @@ namespace AnimalShelter.Data
                 // or dapper
                 // or whatever you're using
             }
+        }
+
+        public void UpdateAllShelterKennels(List<ShelterKennelBO> list)
+        {
+            using (var conn = _connectionFactory.CreateConnection())
+            {
+                // put your entity framework stuff here
+                // or dapper
+                // or whatever you're using
+            }
+        }
+
+        public bool IsAnimalSheltered(AdoptionRequestModel model)
+        {
+            using (var conn = _connectionFactory.CreateConnection())
+            {
+                // put your entity framework stuff here
+                // or dapper
+                // or whatever you're using
+            }
+
+            return true;
         }
     }
 }

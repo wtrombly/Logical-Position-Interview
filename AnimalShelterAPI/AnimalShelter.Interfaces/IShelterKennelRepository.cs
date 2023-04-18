@@ -1,18 +1,17 @@
 ﻿using AnimalShelter.Models.Business;
 using AnimalShelter.Models.Presentation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AnimalShelter.Interfaces
 {
     public interface IShelterKennelRepository
     {
         public List<ShelterKennelBO> GetShelterKennels();
+        public void UpdateAllShelterKennels(List<ShelterKennelBO> list);
 
-        public void UpdateShelterKennel(ResponseShelterModel response);
-        public void UpdateShelterKennel(ResponseRemoveModel response);
+        public void UpdateShelterKennel(ShelterResponseModel response);
+
+        public void UpdateShelterKennel(AdoptionResponseModel response);
+
+        public bool IsAnimalSheltered(AdoptionRequestModel model);
     }
 }
