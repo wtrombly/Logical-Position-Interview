@@ -1,4 +1,5 @@
-﻿using AnimalShelter.Interfaces;
+﻿using AnimalShelter.Data.DataModels;
+using AnimalShelter.Interfaces;
 using AnimalShelter.Models.Business;
 using AnimalShelter.Models.Presentation;
 using System.Reflection;
@@ -23,7 +24,6 @@ namespace AnimalShelter.Data
                 // or dapper
                 // or whatever you're using
             }
-
             return new List<ShelterKennelBO> { };
         }
 

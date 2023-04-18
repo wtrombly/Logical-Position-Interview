@@ -20,7 +20,7 @@ namespace AnimalShelterAPI.Controllers
         [Route("getall")]
         public async Task<IActionResult> GetKennels()
         {
-            return Ok(_shelterKennelRepository.GetShelterKennels().Select(x => new );
+            return Ok(_shelterKennelRepository.GetShelterKennels());
         }
 
         [HttpPut]

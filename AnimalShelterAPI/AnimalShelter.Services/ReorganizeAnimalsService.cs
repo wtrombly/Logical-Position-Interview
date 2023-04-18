@@ -1,5 +1,6 @@
 ﻿using AnimalShelter.Interfaces;
 using AnimalShelter.Models.Business;
+using AnimalShelter.Models.Presentation;
 
 namespace AnimalShelter.Services
 {
