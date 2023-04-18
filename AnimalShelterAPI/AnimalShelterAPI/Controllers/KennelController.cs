@@ -1,4 +1,5 @@
-﻿using AnimalShelter.Interfaces;
+﻿using AnimalShelter.Data.DataModels;
+using AnimalShelter.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AnimalShelterAPI.Controllers
@@ -20,7 +21,16 @@ namespace AnimalShelterAPI.Controllers
         [Route("getall")]
         public async Task<IActionResult> GetKennels()
         {
-            return Ok(_shelterKennelRepository.GetShelterKennels());
+            var shelterKennelBOList = _shelterKennelRepository.GetShelterKennels();
+            var shelterKennelResponseModelList = shelterKennelBOList.Select(x => new ShelterKennelResponseModel
+            {
+                KennelIdValue = x.KennelIdValue,
+                KennelSize = (Size)x.KennelSize,
+                IsOccupied = x.IsOccupied,
+                ShelterAnimal = x.ShelterAnimal
+            }).ToList();
+
+            return Ok(shelterKennelResponseModelList);
         }
 
         [HttpPut]

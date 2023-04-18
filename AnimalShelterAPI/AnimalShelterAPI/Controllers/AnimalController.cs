@@ -11,9 +11,10 @@ namespace AnimalShelterAPI.Controllers
         private readonly IShelterService _shelterService;
         private readonly IRemoveService _removeService;
 
-        public AnimalController(IShelterService iShelterService)
+        public AnimalController(IShelterService iShelterService, IRemoveService removeService)
         {
             _shelterService = iShelterService;
+            _removeService = removeService;
         }
 
         [HttpPost]
