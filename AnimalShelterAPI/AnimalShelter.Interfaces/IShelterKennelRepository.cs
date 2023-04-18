@@ -15,6 +15,5 @@ namespace AnimalShelter.Interfaces
         public bool IsAnimalSheltered(AdoptionRequestModel model);
 
         public void RemoveShelteredAnimal(AdoptionRequestModel request);
-        
     }
 }

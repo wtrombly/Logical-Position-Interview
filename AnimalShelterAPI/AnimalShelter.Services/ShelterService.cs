@@ -11,7 +11,6 @@ namespace AnimalShelter.Services
 {
     public class ShelterService : IShelterService
     {
-
         private readonly IKennelCapacityService _kennelCapacityService;
         private readonly IShelterKennelRepository _shelterKennelRepository;
         private readonly IValidatorService _validatorService;

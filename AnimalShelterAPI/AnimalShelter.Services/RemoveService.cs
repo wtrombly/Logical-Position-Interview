@@ -20,10 +20,10 @@ namespace AnimalShelter.Services
 
         public AdoptionResponseModel RemoveAnimal(AdoptionRequestModel model)
         {
-
             var response = new AdoptionResponseModel();
 
             bool animalSheltered = _shelterKennelRepository.IsAnimalSheltered(model);
+
             if (_validatorService.ValidateAnimalName(model))
             {
                 if (animalSheltered)
