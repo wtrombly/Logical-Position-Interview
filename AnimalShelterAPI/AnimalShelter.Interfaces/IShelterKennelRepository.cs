@@ -13,5 +13,8 @@ namespace AnimalShelter.Interfaces
         public void UpdateShelterKennel(AdoptionResponseModel response);
 
         public bool IsAnimalSheltered(AdoptionRequestModel model);
+
+        public void RemoveShelteredAnimal(AdoptionRequestModel request);
+        
     }
 }

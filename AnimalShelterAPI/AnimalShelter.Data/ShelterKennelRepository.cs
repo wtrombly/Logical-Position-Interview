@@ -1,13 +1,14 @@
 ﻿using AnimalShelter.Interfaces;
 using AnimalShelter.Models.Business;
 using AnimalShelter.Models.Presentation;
+using System.Reflection;
 
 namespace AnimalShelter.Data
 {
     public class ShelterKennelRepository : IShelterKennelRepository
     {
         private readonly IDbConnectionFactory _connectionFactory;
-
+        
         public ShelterKennelRepository(IDbConnectionFactory connectionFactory)
         {
             _connectionFactory = connectionFactory;
@@ -47,6 +48,16 @@ namespace AnimalShelter.Data
         }
 
         public void UpdateAllShelterKennels(List<ShelterKennelBO> list)
+        {
+            using (var conn = _connectionFactory.CreateConnection())
+            {
+                // put your entity framework stuff here
+                // or dapper
+                // or whatever you're using
+            }
+        }
+
+        public void RemoveShelteredAnimal(AdoptionRequestModel model)
         {
             using (var conn = _connectionFactory.CreateConnection())
             {
