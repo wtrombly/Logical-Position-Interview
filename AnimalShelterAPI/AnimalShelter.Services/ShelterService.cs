@@ -43,8 +43,7 @@ namespace AnimalShelter.Services
             
             var kennelCapacity = _kennelCapacityService.CalculateKennelCapacity(kennels);
 
-            // if a small animal, check for the best kennel first and get smaller, assign accordingly
-            //// this is a lot of checks that could be broken out into separate services and have better unit testing.
+            // this is a lot of checks that could be broken out into separate services and have better unit testing.
             // a separate service has not been implemented as the defintion of "best" kennel is not defined in the prompt.
             if (model.AnimalSizeInLbs <= c_smallSizeLimit && kennelCapacity.LargeKennelCountVacant > 0)
             {

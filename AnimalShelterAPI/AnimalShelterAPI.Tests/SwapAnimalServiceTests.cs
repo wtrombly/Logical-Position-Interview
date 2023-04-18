@@ -14,8 +14,6 @@ namespace AnimalShelterAPI.Services.Tests
         public SwapAnimalService swapAnimalService;
         public Mock<IKennelStateService> mockKennelStateService;
 
-
-
         [SetUp]
         public void SetUp()
         {
@@ -117,7 +115,6 @@ namespace AnimalShelterAPI.Services.Tests
         public Size AnimalSize { get; set; }
         public string AnimalName { get; set; }
         public long AnimalId { get; set; }
-        // Add other required properties and methods based on the IShelterAnimal interface
     }
 
 }
