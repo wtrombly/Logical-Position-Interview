@@ -16,6 +16,7 @@ namespace AnimalShelter.Services
         }
 
         // could optimize to check only occupied kennels
+        // could create additional presentation model that contains kennels, as well as message for status of kennels (for example, being length zero, and also summary statistics of kennels(new service))
         public List<ShelterKennelBO> ReorganizeAnimals()
         {
             var kennels = _shelterKennelRepository.GetShelterKennels();
