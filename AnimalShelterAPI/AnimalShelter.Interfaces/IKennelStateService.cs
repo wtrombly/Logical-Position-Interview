@@ -1,4 +1,5 @@
-﻿using AnimalShelter.Models.Business;
+﻿using AnimalShelter.Models;
+using AnimalShelter.Models.Business;
 using System;
 using System.Collections.Generic;
 using System.Linq;

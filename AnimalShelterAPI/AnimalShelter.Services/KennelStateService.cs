@@ -1,4 +1,5 @@
 ﻿using AnimalShelter.Interfaces;
+using AnimalShelter.Models;
 using AnimalShelter.Models.Business;
 using System;
 using System.Collections.Generic;

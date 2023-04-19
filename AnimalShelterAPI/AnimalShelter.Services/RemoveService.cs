@@ -37,16 +37,18 @@ namespace AnimalShelter.Services
                         Message = "The animal has been adopted."
                     };
                 }
+                else
+                {
+                    response = new AdoptionResponseModel
+                    {
+                        IsRemoved = false,
+                        KennelId = null,
+                        AnimalName = model.AnimalName,
+                        Message = "Unable to find animal with animal name:" + model.AnimalName
+                    };
+                }
             }
-
-            response = new AdoptionResponseModel
-            {
-                IsRemoved = false,
-                KennelId = null,
-                AnimalName = model.AnimalName,
-                Message = "Unable to find animal with animal name:" + model.AnimalName
-            };
-
+            
             return response;
         }
     }
