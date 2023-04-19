@@ -33,4 +33,4 @@ In addition, a project for testing was also created. This is a work in progress 
 1. **AnimalShelterAPI.Services.Tests** / You will note that the tests cover the services layer. This is because all business logic is contained within this layer.
 This allows for better maintainability of code and gives opportunity for deploying new **Versions of Services** in the event that business logic changes. This API also showcases the ability to be decoupled in a manner that allows for future **Feature Flagging** in the event that data models concerning the presentation layer need to be updated.
 
-
+I'll  leave the rest for our interview... Looking forward to it!
